@@ -1,0 +1,1 @@
+game:GetService("Players").LocalPlayer:Kick("\n [Aurora User Protection] \n the script is not updated for version 5 of trident survival - join discord.gg/projectaurora and wait for new updates\n [Error 005-Version Missmatch]")
