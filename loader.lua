@@ -5,7 +5,7 @@ local Games = {
     },
     TSV4 = {
         Ids = {"13253735473"},
-        SourceUrl = "https://api.luarmor.net/files/v3/loaders/0e59e9e97e9535a9d72fa78537c36cb7.lua"
+        SourceUrl = "https://raw.githubusercontent.com/MMoonDzn/PAPublic/refs/heads/main/warn.lua"
     }
 }
 
