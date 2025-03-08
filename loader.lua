@@ -22,15 +22,8 @@ local PlaceId = tostring(game.PlaceId)
 local Game, SourceUrl = LocateGame(PlaceId)
 
 if Game ~= "Unknown" and SourceUrl then
-    if Game == "TSV4" then
-        warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-        run_on_actor(getactors()[1], [==[
-            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e59e9e97e9535a9d72fa78537c36cb7.lua"))()
-        ]==])
-    else
-        warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-        loadstring(game:HttpGet(SourceUrl))()
-    end
+    warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
+    loadstring(game:HttpGet(SourceUrl))()
 else
     warn("[Aurora] Game is unsupported!")
 end
