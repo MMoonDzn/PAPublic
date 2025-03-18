@@ -5,13 +5,15 @@ local Games = {
     }
 }
 
+local DefaultSourceUrl = "https://api.luarmor.net/files/v3/loaders/d40f51990986aaaf594c595a85f50f38.lua"
+
 local function LocateGame(PlaceId)
     for Game, Data in pairs(Games) do
         if table.find(Data.Ids, tostring(PlaceId)) then
             return Game, Data.SourceUrl
         end
     end
-    return "Unknown", Data.SourceUrl
+    return "Unknown", DefaultSourceUrl
 end
 
 local PlaceId = tostring(game.PlaceId)
@@ -25,5 +27,5 @@ if Game == "CBOH" then
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d40f51990986aaaf594c595a85f50f38.lua", true))()
     ]==])
 else
-    loadstring(game:HttpGet(SourceUrl, true))()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d40f51990986aaaf594c595a85f50f38.lua", true))()
 end
