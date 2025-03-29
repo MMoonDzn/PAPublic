@@ -30,7 +30,8 @@ if Game ~= "Unknown" and SourceUrl then
         ]==])
     else
         warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-        loadstring(game:HttpGet(SourceUrl))()
+        ---loadstring(game:HttpGet(SourceUrl))()
+        warn("[Aurora] Script Script under maintenance, please wait for updates on our discord - discord.gg/projectaurora")
     end
 else
     warn("[Aurora] Game is unsupported!")
