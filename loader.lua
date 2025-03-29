@@ -1,7 +1,7 @@
 local Games = {
     CB = {
         Ids = {"301549746", "1480424328", "1869597719"},
-        SourceUrl = "-----"---https://api.luarmor.net/files/v3/loaders/3e4a4522ac1479f78b67600e966ecba6.lua
+        SourceUrl = "https://api.luarmor.net/files/v3/loaders/3e4a4522ac1479f78b67600e966ecba6.lua"
     },
     TSV4 = {
         Ids = {"13253735473"},
@@ -30,8 +30,7 @@ if Game ~= "Unknown" and SourceUrl then
         ]==])
     else
         warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-        ---loadstring(game:HttpGet(SourceUrl))()
-        warn("[Aurora] Script Script under maintenance, please wait for updates on our discord - discord.gg/projectaurora")
+        loadstring(game:HttpGet(SourceUrl))()
     end
 else
     warn("[Aurora] Game is unsupported!")
