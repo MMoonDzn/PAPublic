@@ -1,6 +1,6 @@
 local Games = {
     CBOH = {
-        Ids = {"99245482472167", "92491942070237", "87291773701185"},
+        Ids = {"130111024465202", "104042351699675", "129517381077365"},
         SourceUrl = "https://api.luarmor.net/files/v3/loaders/d40f51990986aaaf594c595a85f50f38.lua"
     }
 }
