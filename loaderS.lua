@@ -19,8 +19,6 @@ end
 local PlaceId = tostring(game.PlaceId)
 local Game, SourceUrl = LocateGame(PlaceId)
 
-warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-
 if Game == "CBOH" then
     run_on_actor(getactors()[1], [==[
         script_key="]==]..tostring(script_key)..[==[";
