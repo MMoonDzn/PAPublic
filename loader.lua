@@ -1,3 +1,12 @@
+warn("[Aurora] Checking Executor")
+if identifyexecutor() == "Solara" or identifyexecutor() == "Xeno" or identifyexecutor() == "SirHurt" then
+    warn("[Aurora] Unsupported Executor Detected! Join in: https://discord.gg/projectaurora For Get Support")
+    game:GetService("Players").LocalPlayer:Kick("[Aurora Loader] \n Executor not supported.\n \n Join: https://discord.gg/projectaurora if u need support")
+    setclipboard("https://discord.gg/projectaurora")
+    return
+end
+warn(("[Aurora] Detected Executor:%s"):format(identifyexecutor()))
+
 local Games = {
     CB = {
         Ids = {"301549746", "1480424328", "1869597719"},
