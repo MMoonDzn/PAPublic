@@ -32,8 +32,18 @@ local Game, SourceUrl = LocateGame(PlaceId)
 
 if Game ~= "Unknown" and SourceUrl then
     if Game == "TSV4" then
+        --[[
+            if Game == "CBOH" then
+            run_on_actor(getactors()[1], [==[
+                script_key="]==]..tostring(script_key)..[==[";
+                loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d40f51990986aaaf594c595a85f50f38.lua", true))()
+            ]==])
+        ]]
         warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e59e9e97e9535a9d72fa78537c36cb7.lua"))()
+        run_on_actor(getactors()[1], [==[
+            script_key="]==]..tostring(script_key)..[==[";
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0e59e9e97e9535a9d72fa78537c36cb7.lua"))()
+        ]==])
     else
         warn(("[Aurora] Detected game: %s. Loading script..."):format(Game))
         loadstring(game:HttpGet(SourceUrl))()
